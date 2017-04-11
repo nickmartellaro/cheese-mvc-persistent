@@ -32,11 +32,11 @@ public class CategoryController {
         model.addAttribute("categories", categoryDao.findAll());
         model.addAttribute("title", "My Categories");
 
-        return "/category/index";
+        return "category/index";
 
     }
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @RequestMapping(value = "add", method = RequestMethod.GET)
     public String displayAddCategoryForm(Model model) {
 
         model.addAttribute(new Category());
@@ -55,7 +55,7 @@ public class CategoryController {
         }
 
         categoryDao.save(category);
-        return "redirect:";
+        return "redirect: ";
 
     }
 
