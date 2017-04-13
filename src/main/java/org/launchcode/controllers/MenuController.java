@@ -56,7 +56,7 @@ public class MenuController {
         menuDao.save(newMenu);
 
 
-        return "menu/view/" + newMenu.getId();
+        return return "redirect:view/" + newMenu.getId();
     }
 
 
